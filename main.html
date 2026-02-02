@@ -18,7 +18,9 @@
         <nav class="flex justify-around items-center bg">
           <img class="w-16" src="./assets/logo-design.png" alt="" />
           <div>
-            <h1 class="text-3xl font-bold">$ 4500</h1>
+            <h1 class="text-3xl font-bold">
+              $ <span id="mainBalanceInput">4500</span>
+            </h1>
             <p>Available Balance</p>
           </div>
           <button class="btn">Logout</button>
@@ -83,6 +85,7 @@
                     <input type="text" class="input" value="01234567891" />
                     <label class="label">Amount to Add</label>
                     <input
+                      id="amountInput"
                       type="text"
                       class="input"
                       placeholder="Add amount to Add"
@@ -94,7 +97,9 @@
                       value="1234"
                       placeholder="Enter 4 digit pin number"
                     />
-                    <button class="btn btn-neutral mt-4">Add Money</button>
+                    <button id="addMoneyBtn" class="btn btn-neutral mt-4">
+                      Add Money
+                    </button>
                   </fieldset>
                 </div>
               </div>
