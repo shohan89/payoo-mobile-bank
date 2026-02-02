@@ -41,6 +41,7 @@
             <h3>Add Money</h3>
           </div>
           <div
+            id="cashOutBtn"
             class="box cursor-pointer border text-center p-4 m-4 bg-white rounded-lg shadow-lg"
           >
             <h3>Cash Out</h3>
@@ -74,29 +75,41 @@
               <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                 <div class="card-body">
                   <fieldset class="fieldset">
-                    <label class="label">Select a bank</label>
-                    <select class="select">
-                      <option disabled selected>Pick a method</option>
-                      <option value="Bkash">Bkash</option>
-                      <option value="Nagad">Nagad</option>
-                      <option value="Rocket">Rocket</option>
-                    </select>
-                    <label class="label">Account Number</label>
-                    <input type="text" class="input" value="01234567891" />
-                    <label class="label">Amount to Add</label>
-                    <input
-                      id="amountInput"
-                      type="text"
-                      class="input"
-                      placeholder="Add amount to Add"
-                    />
-                    <label class="label">Pin Number</label>
-                    <input
-                      type="text"
-                      class="input"
-                      value="1234"
-                      placeholder="Enter 4 digit pin number"
-                    />
+                    <div id="selectBankContainer" class="visible">
+                      <label class="label">Select a bank</label>
+                      <select class="select">
+                        <option disabled selected>Pick a method</option>
+                        <option value="Bkash">Bkash</option>
+                        <option value="Nagad">Nagad</option>
+                        <option value="Rocket">Rocket</option>
+                      </select>
+                    </div>
+                    <div id="accountNumContainer" class="visible">
+                      <label class="label">Account Number</label>
+                      <input type="text" class="input" value="01234567891" />
+                    </div>
+                    <div id="agentNumContainer" class="hidden">
+                      <label class="label">Agent Number</label>
+                      <input type="text" class="input" value="01234567891" />
+                    </div>
+                    <div>
+                      <label class="label">Amount to Add</label>
+                      <input
+                        id="amountInput"
+                        type="text"
+                        class="input"
+                        placeholder="Add amount to Add"
+                      />
+                    </div>
+                    <div>
+                      <label class="label">Pin Number</label>
+                      <input
+                        type="text"
+                        class="input"
+                        value="1234"
+                        placeholder="Enter 4 digit pin number"
+                      />
+                    </div>
                     <button id="addMoneyBtn" class="btn btn-neutral mt-4">
                       Add Money
                     </button>
